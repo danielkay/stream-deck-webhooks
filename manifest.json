@@ -11,17 +11,17 @@
                 }
             ],
             "SupportedInMultiActions": true,
-            "Tooltip": "Send an HTTP request to a remote webhook API.",
-            "UUID": "com.nraboy.webhooks.action"
+            "Tooltip": "Send a message to a webhook endpoint.",
+            "UUID": "com.danielkay.webhooks.action"
         }
     ],
     "SDKVersion": 2,
-    "Author": "Nic Raboy",
+    "Author": "Daniel Kay",
     "CodePath": "main.html",
-    "Description": "Send an HTTP request to a remote webhook API.",
+    "Description": "Send a message to a webhook endpoint.",
     "Name": "Webhooks",
     "Icon": "resources/pluginIcon",
-    "URL": "https://www.nraboy.com",
+    "URL": "https://www.danielkay.co.uk",
     "PropertyInspectorPath": "propertyinspector.html",
     "Version": "1.0",
     "OS": [

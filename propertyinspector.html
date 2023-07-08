@@ -12,13 +12,6 @@
                 <div class="sdpi-item-label">Webhook URL</div>
                 <input class="inspector sdpi-item-value" id="webhookurl" value="">
             </div>
-            <div class="sdpi-item" id="select_single">
-                <div class="sdpi-item-label">Method</div>
-                <select class="sdpi-item-value select inspector" id="webhookmethod">
-                    <option value="GET">GET</option>
-                    <option value="POST">POST</option>
-                </select>
-            </div>
             <div type="textarea" class="sdpi-item" id="message_only">
                 <div class="sdpi-item-label">Webhook Payload</div>
                 <span class="sdpi-item-value textarea">
@@ -36,18 +29,8 @@
                     console.log(`[connected] ${JSON.stringify(jsonObj)}`);
                     if(jsonObj.hasOwnProperty('actionInfo')) {
                         settings = Utils.getProp(jsonObj, 'actionInfo.payload.settings', {});
-                        document.getElementById("webhookurl").value = settings.webhookurl || "https://";
-                        document.getElementById("webhookmethod").value = settings.webhookmethod || "GET";
-                        document.getElementById("webhookpayload").value = settings.webhookpayload || "{}";
-                        // [].forEach.call(document.querySelectorAll(".inspector"), element => {
-                        //     element.addEventListener("change", () => {
-                        //         var payload = {};
-                        //         [].forEach.call(document.querySelectorAll(".inspector"), element => {
-                        //             payload[element.id] = element.value;
-                        //         });
-                        //         $SD.api.sendToPlugin($SD.uuid, $SD.actionInfo["action"], payload);
-                        //     });
-                        // });
+                        document.getElementById("webhookurl").value = settings.webhookurl || "ws://localhost:4001";
+                        document.getElementById("webhookpayload").value = settings.webhookpayload || "";
                     }
                 });
             };
